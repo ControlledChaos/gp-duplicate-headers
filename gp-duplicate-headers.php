@@ -5,7 +5,7 @@ Plugin URI: https://github.com/ControlledChaos/gp-duplicate-headers
 Description: Duplicate page headers in the GeneratePress theme. Requires the GP Premium plugin.
 Version: 0.0.1
 Author: Greg Sweet
-Author URI: https://ccdzine.com
+Author URI: http://ccdzine.com
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gp-duplicate-headers
