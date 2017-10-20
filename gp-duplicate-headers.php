@@ -110,7 +110,7 @@ class GP_Duplicate_Headers_Functions {
 				foreach ( $post_meta_infos as $meta_info ) {
 					$meta_key = $meta_info->meta_key;
 					if ( $meta_key == '_wp_old_slug' ) continue;
-					$meta_value = addslashes($meta_info->meta_value);
+					$meta_value = addslashes( $meta_info->meta_value );
 					$sql_query_sel[]= "SELECT $new_post_id, '$meta_key', '$meta_value'";
 				}
 				$sql_query.= implode( " UNION ALL ", $sql_query_sel );
@@ -132,7 +132,7 @@ class GP_Duplicate_Headers_Functions {
 	 * Add the duplicate link to action list for post_row_actions.
 	 */
 	function generate_page_header_duplicate_post_link( $actions, $post ) {
-		if ( $post->post_type=='generate_page_header' && current_user_can( 'edit_posts' ) ) {
+		if ( $post->post_type == 'generate_page_header' && current_user_can( 'edit_posts' ) ) {
 			$actions['duplicate'] = '<a href="' . wp_nonce_url('admin.php?action=generate_page_header_duplicate&post=' . $post->ID, basename(__FILE__), 'duplicate_nonce' ) . '" title="Duplicate this Page Header" rel="permalink">Duplicate</a>';
 		}
 		return $actions;
