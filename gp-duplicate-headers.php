@@ -105,7 +105,7 @@ class GP_Duplicate_Headers_Functions {
 			 * Duplicate all post meta just in two SQL queries.
 			 */
 			$post_meta_infos = $wpdb->get_results( "SELECT meta_key, meta_value FROM $wpdb->postmeta WHERE post_id=$post_id" );
-			if ( count $post_meta_infos ) !=0 ) {
+			if ( count ( $post_meta_infos ) !=0 ) {
 				$sql_query = "INSERT INTO $wpdb->postmeta ( post_id, meta_key, meta_value ) ";
 				foreach ( $post_meta_infos as $meta_info ) {
 					$meta_key = $meta_info->meta_key;
